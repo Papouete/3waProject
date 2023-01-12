@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Créer un TAG
+{% endblock %}
+
+{% block body %}
+    <div class="flex justify-center">
+        <div class="text-5xl font-bold mt-3 mb-6 text-center">
+            <h1>Créer un TAG</h1>
+        </div>
+    </div>
+    {{ include('pages/tag/_form.html.twig') }}
+
+{% endblock %}

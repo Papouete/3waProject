@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<meta charset="UTF-8">
+		<title>
+			Blog
+			{% block title %}{% endblock %}
+		</title>
+		<link rel="icon" href="{{ asset('static/perso/icon-city.jpg')}}">
+		{% block stylesheets %}
+			{{ encore_entry_link_tags('app') }}
+		{% endblock %}
+
+		{% block javascripts %}
+			{{ encore_entry_script_tags('app') }}
+			{# <script src="{{ asset('js/app.js') }}" type="module" ></script> #}
+		{% endblock %}
+	</head>
+	<body>
+		{% include "others/_header.html.twig" %}
+			<main>
+				{% block body %}
+				{% endblock %}
+			</main>
+		{% include "others/_footer.html.twig" %}
+	</body>
+</html>

@@ -1,0 +1,25 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Connexion
+{% endblock %}
+
+{% block body %}
+	{% if error %}
+		<div class="error login">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+	{% endif %}
+		<div class="container mx-auto md:mx-auto sm:mx-0 mt-0 my-40 flex-1 flex flex-col items-center justify-center p-3.5">
+			<img class ="mb-5 w-fit" src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg" alt="Phone image"/>
+			<form name="login" action="{{ path('security.login') }}" method="post">
+				<div class="mb-6">
+					<input type="email" id="username" name="_username" class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="Adresse email" required/>
+				</div>
+				<div class="mb-6">
+					<input type="password" id="password" name="_password" class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="Mot de passe" required/>
+				</div>
+				<input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+				<button type="submit" class="inline-block px-7 py-3 bg-blue-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out w-full" data-mdb-ripple="true" data-mdb-ripple-color="light">
+					Connexion
+				</button>
+			</form>
+		</div>
+{% endblock %}

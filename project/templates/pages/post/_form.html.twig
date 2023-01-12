@@ -1,0 +1,37 @@
+<div class="container md:mx-auto sm:mx-0">
+    {{ form_start(postForm) }}
+        <div class="flex justify-center">
+            <div class="md:w-6/12 lg:w-10/12 lg:ml-20">
+                <div class="mb-3">
+                    {{ form_label(postForm.title, 'Titre', {'attr': {'class': 'w-32 text-right pr-4 font-bold text-gray-700'}}) }}
+                    {{ form_widget(postForm.title, {'attr': {'class': " border border-gray-300 shadow p-3 w-full rounded mb"}}) }}
+                    <div class="error">
+                        {{ form_errors(postForm.title) }}
+                    </div>
+                </div>
+                <div class="mb-3">
+                    {{ form_label(postForm.categories, 'Catégories :', {'attr': {'class': 'w-32 text-right pr-4 font-bold text-gray-700'}}) }}
+                    {{ form_widget(postForm.categories, {'attr': {'class': " checkbox-all form-multiselect" }}) }}
+            </div> 
+                <div class="mb-3">
+                    {{ form_label(postForm.tags, 'Tag :', {'attr': {'class': 'w-32 text-right pr-4 font-bold text-gray-700'}}) }}
+                    {{ form_widget(postForm.tags, {'attr': {'class': " checkbox-all form-multiselect" }}) }}
+                </div> 
+                <div class="mb-3">
+                    {{ form_label(postForm.content, 'Contenu', {'attr': {'class': 'w-32 text-right pr-4 font-bold text-gray-700'}}) }}
+                    {{ form_widget(postForm.content, {'attr': {'class': "border border-gray-300 shadow p-3 w-full rounded mb"}}) }}
+                </div>    
+                <div class="mb-3">
+                    {{ form_label(postForm.image, 'Image', {'attr': {'class': 'w-32 text-right pr-4 font-bold text-gray-700'}}) }}
+                    {{ form_widget(postForm.image, {'attr': {'class': "form-control block w-full px-2 py-1 text-sm font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"}}) }}
+                    <div class="error">
+                        {{ form_errors(postForm.image) }}
+                    </div>
+                </div>  
+                    <button type="submit" class="mb-3 inline-flex items-center py-2 px-4 text-xl font-normal text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        {{ button_label|default('publier') }}
+                    </button>
+            </div>
+        </div>
+    {{ form_end(postForm) }}
+</div>

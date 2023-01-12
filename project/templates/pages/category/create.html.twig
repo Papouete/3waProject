@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Créer une Catégorie
+{% endblock %}
+
+{% block body %}
+    <div class="flex justify-center">
+        <div class="text-5xl font-bold mt-3 mb-6 text-center">
+            <h1>Créer une Catégorie</h1>
+        </div>
+    </div>
+    {{ include('pages/category/_form.html.twig') }}
+
+{% endblock %}

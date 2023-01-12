@@ -1,0 +1,5 @@
+{% set title = (app.request.attributes.get("_route") == 'post.user' ? "Liste de mes Articles" : "Bienvenue sur le Blog") %}
+{% include "layouts/_home.html.twig" with {
+  title: title,
+  posts: posts
+} %}

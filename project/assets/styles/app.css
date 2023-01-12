@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: rgb(203, 213, 225);
+}
+
+main {
+  min-height: 100vh;
+}
+
+.error {
+  padding: 10px;
+  color: rgba(170, 0, 0, 1);
+  text-align:left;
+}
+
+.error.login {
+  padding: 15px;
+  background-color: rgba(170, 0, 0, 0.5);
+  text-align:center;
+  margin: 1%, 5%;
+  color: black
+}
+
+.background-footer {
+  background-color:rgb(16, 67, 178)!important
+}
+
+.background-footer1 {
+  background-color:gray!important
+}
+
+div.checkbox-all {
+  list-style: none;
+  padding: 5px;
+}
+
+div.checkbox-all {
+display: inline;
+}
+
+div.checkbox-all label{
+  display: inline-block;
+  background-color: rgba(255, 255, 255, .9);
+  border: 2px solid rgba(139, 139, 139, .3);
+  color: #adadad;
+  border-radius: 25px;
+  white-space: nowrap;
+  margin: 3px 3px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: all .2s;
+}
+
+div.checkbox-all label {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+div.checkbox-all label::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 12px;
+  padding: 2px 6px 2px 2px;
+  content: "\f067";
+  transition: transform .3s ease-in-out;
+}
+
+div.checkbox-all input[type="checkbox"]:checked + label::before {
+  content: "\f00c";
+  transform: rotate(-360deg);
+  transition: transform .3s ease-in-out;
+}
+
+div.checkbox-all input[type="checkbox"]:checked + label {
+  border: 2px solid rgb(16, 67, 178);
+  background-color: rgb(16, 67, 178);
+  color: #fff;
+  transition: all .2s;
+}
+
+div.checkbox-all input[type="checkbox"] {
+display: absolute;
+}
+
+div.checkbox-all input[type="checkbox"] {
+position: absolute;
+opacity: 0;
+}
+
+div.checkbox-all input[type="checkbox"]:focus + label {
+border: 2px solid rgba(139, 139, 139, .3);
+}
